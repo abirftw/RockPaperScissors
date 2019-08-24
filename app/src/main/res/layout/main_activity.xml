@@ -5,7 +5,6 @@
     android:background="@color/background">
 
     <ImageView
-        android:contentDescription="@string/app_name"
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="211dp"
@@ -13,6 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="3dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="@string/app_name"
         app:srcCompat="@drawable/rps_banner" />
 
     <TextView
@@ -40,6 +40,7 @@
         android:textColor="@color/background"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:onClick="onClick"
         app:backgroundTint="@android:color/black" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -52,6 +53,7 @@
         android:layout_marginBottom="118dp"
         android:text="@string/player"
         android:textColor="@color/background"
+        android:onClick="onClick"
         android:textSize="30sp"
         android:textStyle="bold"
         app:backgroundTint="@android:color/black" />
