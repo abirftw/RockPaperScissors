@@ -3,4 +3,5 @@
     <dimen name="margin_left">16dp</dimen>
     <dimen name="margin_right">16dp</dimen>
     <dimen name="gameUI">40sp</dimen>
+    <dimen name="content_dimen">0dp</dimen>
 </resources>
