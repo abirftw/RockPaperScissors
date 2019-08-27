@@ -1,62 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/background">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/margin_left"
+    android:paddingEnd="@dimen/margin_right">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="211dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
         android:contentDescription="@string/app_name"
-        app:srcCompat="@drawable/rps_banner" />
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/content_dimen"
+        android:layout_weight="2"
+        android:src="@drawable/rps_banner"
+        />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="171dp"
-        android:layout_marginBottom="321dp"
-        android:text="@string/vs"
-        android:textColor="@android:color/black"
-        android:textSize="40sp"
-        android:textStyle="bold" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_comp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="215dp"
+        android:gravity="center"
         android:text="@string/comp"
-        android:textColor="@color/background"
-        android:textSize="30sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@color/game_background"
         android:textStyle="bold"
-        android:onClick="onClick"
-        app:backgroundTint="@android:color/black" />
+        android:textSize="@dimen/gameUI"
+        />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_player"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="129dp"
-        android:layout_marginBottom="118dp"
+        android:gravity="center"
+        android:backgroundTint="@color/colorPrimary"
         android:text="@string/player"
-        android:textColor="@color/background"
-        android:onClick="onClick"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:backgroundTint="@android:color/black" />
+        android:textColor="@color/game_background"
+        android:textSize="@dimen/gameUI"
+        android:textStyle="bold" />
 
 
-</RelativeLayout>
+</LinearLayout>
