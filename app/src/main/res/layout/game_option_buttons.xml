@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/margin_left"
+    android:paddingEnd="@dimen/margin_right">
+
+    <Button
+        android:id="@+id/p1_rock"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/game_background"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="@string/rock"
+        android:textSize="@dimen/button_text"
+        />
+
+    <Button
+        android:id="@+id/p1_paper"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/game_background"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="@string/paper"
+        android:textSize="@dimen/button_text"/>
+
+    <Button
+        android:id="@+id/p1_scissors"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/game_background"
+        android:layout_weight="1"
+        android:textStyle="bold"
+        android:text="@string/scissors"
+        android:textSize="@dimen/button_text"/>
+</LinearLayout>
