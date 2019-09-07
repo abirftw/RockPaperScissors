@@ -1,160 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/game_background">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/game_background"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/p1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="146dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/p1_rock"
-        android:layout_width="wrap_content"
+        android:id="@+id/compName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="303dp"
-        android:layout_marginBottom="550dp"
-        android:backgroundTint="@android:color/black"
-        android:onClick="onClick"
-        android:text="@string/rock"
-        android:textColor="@color/background"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+        android:text="@string/comp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="@dimen/gameUI"
+        android:textColor="@color/colorPrimary"
+        />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/p1_paper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="550dp"
-        android:backgroundTint="@android:color/black"
-        android:onClick="onClick"
-        android:text="@string/paper"
-        android:textColor="@color/background"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/p1_scissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="138dp"
-        android:layout_marginBottom="550dp"
-        android:backgroundTint="@android:color/black"
-        android:onClick="onClick"
-        android:text="@string/scissors"
-        android:textColor="@color/background"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/p2_rock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="303dp"
-        android:layout_marginBottom="150dp"
-        android:backgroundTint="@android:color/black"
-        android:onClick="onClick"
-        android:text="@string/rock"
-        android:textColor="@color/background"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/p2_scissors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="150dp"
-        android:backgroundTint="@android:color/black"
-        android:onClick="onClick"
-        android:text="@string/scissors"
-        android:textColor="@color/background"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/p2_paper"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="150dp"
-        android:backgroundTint="@android:color/black"
-        android:onClick="onClick"
-        android:text="@string/paper"
-        android:textColor="@color/background"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateBehavior="cycle"
+        android:indeterminate="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/p2"
-        android:layout_width="wrap_content"
+        android:layout_weight="2"
+        android:id="@+id/compStatus"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="137dp"
-        android:layout_marginBottom="93dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:text="@string/Pending"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="@dimen/gameUI"
+        android:textColor="@color/colorPrimary"
+        />
 
     <TextView
-        android:id="@+id/op1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="137dp"
-        android:layout_marginTop="215dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/op2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="138dp"
-        android:layout_marginBottom="288dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <TextView
+        android:layout_weight="2"
         android:id="@+id/result"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginBottom="17dp"
-        android:text="TextView"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:text="@string/comp"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/button_text"
         android:textStyle="bold" />
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/play_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Pending"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="@dimen/gameUI"
+        android:textColor="@color/colorPrimary" />
+
+    <include
+        layout="@layout/game_option_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/player_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/player"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="@dimen/gameUI"
+        android:textColor="@color/colorPrimary"
+        />
+
+</LinearLayout>
