@@ -6,7 +6,7 @@ public class Game {
         this.p2_played = p2_played;
     }
 
-    private enum Options{
+    protected enum Options{
         ROCK, PAPER, SCISSORS
     }
     protected boolean isP1_played() {
@@ -34,8 +34,8 @@ public class Game {
         return p1_status.toString();
     }
 
-    protected void setP1_status(Options p1_status) {
-        this.p1_status = p1_status;
+    protected synchronized void setP1_status(Options p1_status) {
+       this.p1_status = p1_status;
     }
 
     protected String getP2_status() {
@@ -49,16 +49,13 @@ public class Game {
     private Options p2_status;
     public int calculate()
     {
-        if(p1_played && p2_played){
             if(p1_status == p2_status){
                 return 0;
-            } else if((p1_status == Options.ROCK && p2_status == Options.PAPER)
-                    || (p1_status == Options.PAPER && p2_status == Options.SCISSORS)
+            } else if((p1_status == Options.ROCK && p2_status == Options.SCISSORS)
+                    || (p1_status == Options.SCISSORS && p2_status == Options.PAPER)
                     || (p1_status == Options.PAPER && p2_status == Options.ROCK)){
                 return 1;
             } else return 2;
-        }
-        return -1;
     }
     public void newGame(){
         setP1_played(false);

@@ -4,5 +4,5 @@
     <dimen name="margin_right">16dp</dimen>
     <dimen name="gameUI">40sp</dimen>
     <dimen name="content_dimen">0dp</dimen>
-    <dimen name="button_text">25sp</dimen>
+    <dimen name="button_text">20sp</dimen>
 </resources>

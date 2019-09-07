@@ -15,6 +15,7 @@
         android:textStyle="bold"
         android:text="@string/rock"
         android:textSize="@dimen/button_text"
+        android:onClick="rockButton"
         />
 
     <Button
@@ -26,7 +27,9 @@
         android:layout_weight="1"
         android:textStyle="bold"
         android:text="@string/paper"
-        android:textSize="@dimen/button_text"/>
+        android:textSize="@dimen/button_text"
+        android:onClick="paperButton"
+        />
 
     <Button
         android:id="@+id/p1_scissors"
@@ -37,5 +40,7 @@
         android:layout_weight="1"
         android:textStyle="bold"
         android:text="@string/scissors"
-        android:textSize="@dimen/button_text"/>
+        android:textSize="@dimen/button_text"
+        android:onClick="scissorsButton"
+        />
 </LinearLayout>
